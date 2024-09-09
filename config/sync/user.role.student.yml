@@ -1,0 +1,12 @@
+uuid: f38eebc3-949a-45f9-afd7-0e2e8a124fd6
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+id: student
+label: Student
+weight: 5
+is_admin: null
+permissions:
+  - 'access content'

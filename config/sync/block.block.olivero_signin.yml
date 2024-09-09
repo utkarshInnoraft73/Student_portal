@@ -1,0 +1,33 @@
+uuid: 209b57fb-f231-42f7-bfdb-a7016ba2e365
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.sign-in
+  module:
+    - system
+    - user
+  theme:
+    - olivero
+id: olivero_signin
+theme: olivero
+region: primary_menu
+weight: 0
+provider: null
+plugin: 'system_menu_block:sign-in'
+settings:
+  id: 'system_menu_block:sign-in'
+  label: 'Sign in '
+  label_display: '0'
+  provider: system
+  level: 1
+  depth: 0
+  expand_all_items: false
+visibility:
+  user_role:
+    id: user_role
+    negate: false
+    context_mapping:
+      user: '@user.current_user_context:current_user'
+    roles:
+      anonymous: anonymous

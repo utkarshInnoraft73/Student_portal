@@ -1,0 +1,25 @@
+<?php
+
+/**
+ * @file
+ * To implement the hooks.
+ */
+
+use Drupal\user\Entity\User;
+
+/**
+ * Implements delete_user_cron() to delete the older student passed 6 month ago.
+ */
+function delete_user_cron() {
+  $query = \Drupal::entityQuery('user')
+    ->condition('roles', 'student')
+    ->condition('field_passing_year', strtotime('-6 month'), '<=')
+    ->accessCheck(FALSE)
+    ->execute();
+  if (!empty($query)) {
+    $nodes = User::loadMultiple($query);
+    foreach ($nodes as $node) {
+      $node->delete();
+    }
+  }
+}

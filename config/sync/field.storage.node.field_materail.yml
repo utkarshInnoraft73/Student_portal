@@ -1,0 +1,23 @@
+uuid: 00178db3-9ba6-4838-8e5c-0eae3a83cb03
+langcode: en
+status: true
+dependencies:
+  module:
+    - file
+    - node
+id: node.field_materail
+field_name: field_materail
+entity_type: node
+type: file
+settings:
+  target_type: file
+  display_field: false
+  display_default: false
+  uri_scheme: public
+module: file
+locked: false
+cardinality: -1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

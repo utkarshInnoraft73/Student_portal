@@ -1,0 +1,47 @@
+uuid: b5baecc9-24bc-47d5-9ac0-1ff253a398d1
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.st.body
+    - field.field.node.st.field_cateogary_stream
+    - field.field.node.st.field_materail
+    - node.type.st
+  module:
+    - file
+    - text
+    - user
+id: node.st.default
+targetEntityType: node
+bundle: st
+mode: default
+content:
+  body:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 101
+    region: content
+  field_cateogary_stream:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 103
+    region: content
+  field_materail:
+    type: file_default
+    label: above
+    settings:
+      use_description_as_link_text: true
+    third_party_settings: {  }
+    weight: 102
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden: {  }

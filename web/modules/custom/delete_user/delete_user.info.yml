@@ -1,0 +1,7 @@
+name: 'Delete User'
+type: module
+description: 'This module delete the past user.'
+package: Custom
+core_version_requirement: ^10 || ^11
+dependencies:
+  - drupal:user

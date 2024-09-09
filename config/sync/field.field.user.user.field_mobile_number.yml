@@ -1,0 +1,24 @@
+uuid: 4de71017-28e2-4079-8a9e-220703ab5ce2
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.user.field_mobile_number
+  module:
+    - user
+id: user.user.field_mobile_number
+field_name: field_mobile_number
+entity_type: user
+bundle: user
+label: 'Mobile number'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: '+91'
+  suffix: ''
+field_type: integer

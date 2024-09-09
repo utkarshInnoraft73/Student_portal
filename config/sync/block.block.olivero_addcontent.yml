@@ -1,0 +1,33 @@
+uuid: d5de6bbd-d92e-4e12-998f-7eaa774834d4
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.acade
+  module:
+    - system
+    - user
+  theme:
+    - olivero
+id: olivero_addcontent
+theme: olivero
+region: primary_menu
+weight: 0
+provider: null
+plugin: 'system_menu_block:acade'
+settings:
+  id: 'system_menu_block:acade'
+  label: 'Add Content'
+  label_display: '0'
+  provider: system
+  level: 1
+  depth: 0
+  expand_all_items: false
+visibility:
+  user_role:
+    id: user_role
+    negate: false
+    context_mapping:
+      user: '@user.current_user_context:current_user'
+    roles:
+      academic_head: academic_head

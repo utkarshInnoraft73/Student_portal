@@ -1,0 +1,65 @@
+uuid: 6d0396fb-8c15-47b8-b7a2-c35c326edd9c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.notice.body
+    - node.type.notice
+  module:
+    - layout_builder
+    - text
+    - user
+third_party_settings:
+  layout_builder:
+    enabled: true
+    allow_custom: false
+    sections:
+      -
+        layout_id: layout_onecol
+        layout_settings:
+          label: ''
+        components:
+          baff451d-85ee-4302-bc51-7bcba27dccb6:
+            uuid: baff451d-85ee-4302-bc51-7bcba27dccb6
+            region: content
+            configuration:
+              id: 'extra_field_block:node:notice:links'
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+            weight: 0
+            additional: {  }
+          83a25575-e13b-4924-8f36-e6c3f8ce1019:
+            uuid: 83a25575-e13b-4924-8f36-e6c3f8ce1019
+            region: content
+            configuration:
+              id: 'field_block:node:notice:body'
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              formatter:
+                type: text_default
+                label: hidden
+                settings: {  }
+                third_party_settings: {  }
+            weight: 1
+            additional: {  }
+        third_party_settings: {  }
+id: node.notice.default
+targetEntityType: node
+bundle: notice
+mode: default
+content:
+  body:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 101
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden: {  }

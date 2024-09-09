@@ -1,0 +1,9 @@
+uuid: 92aefa36-d3fe-4b5f-8643-d0e089c60953
+langcode: en
+status: true
+dependencies: {  }
+name: Stream
+vid: stream
+description: 'It defines the stream of the student.'
+weight: 0
+new_revision: false

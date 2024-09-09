@@ -1,0 +1,21 @@
+uuid: a4b162f2-e969-4cdb-a26d-6b6538d5524d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.user.field_joinning_year
+  module:
+    - datetime
+    - user
+id: user.user.field_joinning_year
+field_name: field_joinning_year
+entity_type: user
+bundle: user
+label: 'Joinning year'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: datetime

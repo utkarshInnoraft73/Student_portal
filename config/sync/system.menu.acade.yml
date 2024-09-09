@@ -1,0 +1,8 @@
+uuid: f34d6ece-fefa-44aa-bf77-3141220e1979
+langcode: en
+status: true
+dependencies: {  }
+id: acade
+label: 'Add Content'
+description: ''
+locked: false

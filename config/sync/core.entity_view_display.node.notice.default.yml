@@ -4,9 +4,13 @@ status: true
 dependencies:
   config:
     - field.field.node.notice.body
+    - field.field.node.notice.field_end_date
+    - field.field.node.notice.field_start
     - node.type.notice
   module:
+    - datetime
     - layout_builder
+    - layout_discovery
     - text
     - user
 third_party_settings:
@@ -44,6 +48,40 @@ third_party_settings:
                 third_party_settings: {  }
             weight: 1
             additional: {  }
+          1fae1ce1-7107-473b-9c6c-0494946b50b8:
+            uuid: 1fae1ce1-7107-473b-9c6c-0494946b50b8
+            region: content
+            configuration:
+              id: 'field_block:node:notice:field_start'
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              formatter:
+                type: datetime_default
+                label: above
+                settings:
+                  timezone_override: ''
+                  format_type: medium
+                third_party_settings: {  }
+            weight: 2
+            additional: {  }
+          df5c5449-833b-4491-89fb-c8fe7e6aee4a:
+            uuid: df5c5449-833b-4491-89fb-c8fe7e6aee4a
+            region: content
+            configuration:
+              id: 'field_block:node:notice:field_end_date'
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              formatter:
+                type: datetime_default
+                label: above
+                settings:
+                  timezone_override: ''
+                  format_type: medium
+                third_party_settings: {  }
+            weight: 3
+            additional: {  }
         third_party_settings: {  }
 id: node.notice.default
 targetEntityType: node
@@ -56,6 +94,24 @@ content:
     settings: {  }
     third_party_settings: {  }
     weight: 101
+    region: content
+  field_end_date:
+    type: datetime_default
+    label: above
+    settings:
+      timezone_override: ''
+      format_type: medium
+    third_party_settings: {  }
+    weight: 103
+    region: content
+  field_start:
+    type: datetime_default
+    label: above
+    settings:
+      timezone_override: ''
+      format_type: medium
+    third_party_settings: {  }
+    weight: 102
     region: content
   links:
     settings: {  }

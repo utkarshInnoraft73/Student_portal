@@ -17,10 +17,13 @@ module:
   contextual: 0
   datetime: 0
   dblog: 0
+  delete_notice: 0
+  delete_user: 0
   devel: 0
   devel_generate: 0
   dynamic_page_cache: 0
   editor: 0
+  email_login_otp: 0
   field: 0
   field_ui: 0
   file: 0
@@ -41,7 +44,10 @@ module:
   path: 0
   path_alias: 0
   permissions_by_term: 0
+  rest: 0
+  scheduler: 0
   search: 0
+  serialization: 0
   shortcut: 0
   smtp: 0
   standard: 0
@@ -51,7 +57,10 @@ module:
   token: 0
   toolbar: 0
   user: 0
+  views_better_rest: 0
+  views_taxonomy_term_name_depth: 0
   views_ui: 0
+  pathauto: 1
   views: 10
 theme:
   olivero: 0

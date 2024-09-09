@@ -1,0 +1,26 @@
+<?php
+
+/**
+ * @file
+ * To implement the hooks.
+ */
+
+use Drupal\node\Entity\Node;
+
+/**
+ * Implements delete_notice_cron() to delete the older notice.
+ */
+function delete_notice_cron() {
+  $current_time = \Drupal::time()->getRequestTime();
+  $query = \Drupal::entityQuery('node')
+    ->condition('type', 'notice')
+    ->condition('field_end_date', $current_time, '>')
+    ->accessCheck(FALSE)
+    ->execute();
+  if (!empty($query)) {
+    $nodes = Node::loadMultiple($query);
+    foreach ($nodes as $node) {
+      $node->delete();
+    }
+  }
+}

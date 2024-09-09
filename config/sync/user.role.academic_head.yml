@@ -1,0 +1,17 @@
+uuid: a71d2400-7d2b-4885-8fae-4d30fe810de6
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.st
+  module:
+    - node
+    - system
+id: academic_head
+label: 'Academic Head'
+weight: 4
+is_admin: null
+permissions:
+  - 'access content'
+  - 'create st content'
+  - 'edit own st content'

@@ -1,0 +1,20 @@
+uuid: 27f9e1e0-596f-409a-9b8c-3d194b0c2bea
+langcode: en
+status: true
+dependencies:
+  module:
+    - taxonomy
+    - user
+id: user.field_stream
+field_name: field_stream
+entity_type: user
+type: entity_reference
+settings:
+  target_type: taxonomy_term
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

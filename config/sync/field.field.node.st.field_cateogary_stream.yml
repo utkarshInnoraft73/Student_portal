@@ -1,0 +1,29 @@
+uuid: e315b627-15ea-4f2d-83e0-30390c50522c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_cateogary_stream
+    - node.type.st
+    - taxonomy.vocabulary.stream
+id: node.st.field_cateogary_stream
+field_name: field_cateogary_stream
+entity_type: node
+bundle: st
+label: 'Cateogary stream'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      stream: stream
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference
